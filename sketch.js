@@ -6,6 +6,10 @@ let value5 = "orange";
 let value6 = "yellow";
 let value7 = "teal"
 
+function preload(){
+  sound = loadSound('assets/melee_frying_pan_01.mp3')
+}
+
 function setup() {
   createCanvas(710, 400, WEBGL);
 
@@ -21,21 +25,19 @@ function draw() {
 
   noStroke();
 
-  //normalMaterial();
+
   push();
   translate(-240, -100, 0);
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  //if ((keyIsPressed == true)  && (key == '1')) {
-    //fill(250);
- // }
+ 
 
 
   plane(70);
   pop();
 
-  //fill(value2);
+
 
   fill(value2);
 
@@ -44,9 +46,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+  
   box(70, 70, 70);
   pop();
 
@@ -57,9 +57,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+  
   cylinder(70, 70);
   pop();
 
@@ -70,9 +68,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+ 
   cone(50, 70);
   pop();
 
@@ -83,9 +79,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+  
   torus(50, 20);
   pop();
 
@@ -96,9 +90,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+  
   sphere(50);
   pop();
 
@@ -109,12 +101,35 @@ function draw() {
   rotateZ(frameCount * 0.01);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
-  if (mouseIsPressed === true) {
-    fill(250);
-  }
+  
   ellipsoid(30, 40, 40);
   pop();
 
+}
+
+function keyTyped() {
+  if (key == '1') {
+    sound.play();
+  } 
+  if (key == '2') {
+    sound.play();
+  } 
+  if (key == '3') {
+    sound.play();
+  } 
+  if (key == '4') {
+    sound.play();
+  } 
+  if (key == '5') {
+    sound.play();
+  } 
+  if (key == '6') {
+    sound.play();
+  } 
+  if (key == '7') {
+    sound.play();
+  } 
+  
 }
 
 function keyPressed() {
