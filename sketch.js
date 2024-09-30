@@ -20,6 +20,9 @@ function setup() {
 
 function draw() {
   background(250);
+  fill(value1);
+  rect(25, 25, 50, 50);
+}
 
   fill(value1);
 
@@ -105,8 +108,6 @@ function draw() {
   ellipsoid(30, 40, 40);
   pop();
 
-}
-
 function keyTyped() {
   if (key == '1') {
     sound.play();
@@ -164,7 +165,13 @@ function keyPressed() {
 
   if (key === '7') {
     value7 = 250;
+    console.log('Hello');
 
   }
-
+  function deviceShaken() {
+    value = value + 5;
+    if (value > 255) {
+      value = 0;
+    }
+  }
 }
