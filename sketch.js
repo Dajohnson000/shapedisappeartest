@@ -20,7 +20,7 @@ function setup() {
 
 function draw() {
   background(250);
-  fill(value1);
+  fill(value);
   rect(25, 25, 50, 50);
 }
 
